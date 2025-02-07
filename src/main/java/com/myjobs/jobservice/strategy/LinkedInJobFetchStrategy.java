@@ -42,7 +42,7 @@ public class LinkedInJobFetchStrategy implements JobFetchStrategy {
     }
 
 
-    private CompletableFuture<CombinedData> combineResults(
+    public CompletableFuture<CombinedData> combineResults(
             CompletableFuture<SearchResultData> savedJobs,
             CompletableFuture<SearchResultData> appliedJobs,
             CompletableFuture<SearchResultData> archivedJobs,
