@@ -1,7 +1,7 @@
 # Job Service Application
 
 ## Overview
-The Job Service Application fetches job data from external portals like LinkedIn and provides combined results in a unified format. It supports operations for saved, applied, archived, and in-progress jobs. The service is resilient and fault-tolerant, leveraging Resilience4j for handling rate-limiting, retries, and circuit breakers.
+The Job Service Application fetches job data from external portals like LinkedIn and provides data in simple json provided below . The service is resilient and fault-tolerant, using Resilience4j for handling rate-limiter, and circuit breakers.
 
 ## Features
 - Fetch jobs from external APIs (e.g., LinkedIn) for multiple job types:
@@ -9,8 +9,8 @@ The Job Service Application fetches job data from external portals like LinkedIn
     - Applied Jobs
     - Archived Jobs
     - In-Progress Jobs
-- Resilience4j is used  mechanisms to handle API failures and rate limits.
-- Fault-tolerant fallback mechanism to return default data when external services are unavailable again using resiliance4j.
+- Resilience4j is used  to to handle API failures and rate limits.
+- Fault-tolerant fallback  to return default null  data when external services are unavailable again using resiliance4j also logs service error .
 - Asynchronous processing using `CompletableFuture`.
 
 ## Technologies Used
@@ -24,8 +24,8 @@ The Job Service Application fetches job data from external portals like LinkedIn
 ## Getting Started
 
 ### Prerequisites
-- Java 21 or higher
-- Maven 3.X or higher
+- Java 21 
+- Maven 3.X 
 
 ### Installation
 1. Clone job repository repository:
