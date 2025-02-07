@@ -26,7 +26,7 @@ public class JobController {
     private final JobService jobService;
 
     @GetMapping
-    @RateLimiter(name = "myRateLimiter", fallbackMethod = "fallbackMethod")
+    @RateLimiter(name = "jobServiceRateLimiter", fallbackMethod = "jobServiceFallbackMethod")
     public ResponseEntity<CombinedData> fetchJobs(
             @RequestParam JobSource source,
             @RequestHeader("x-csrf-token") String authToken,
@@ -40,7 +40,7 @@ public class JobController {
     }
 
 
-    public ResponseEntity<String> fallbackMethod(Exception ex) {
+    public ResponseEntity<String> jobServiceFallbackMethod(Exception ex) {
         return new ResponseEntity<>(RATE_LIMIT_EXCEEDED_ERROR_MSG,HttpStatus.TOO_MANY_REQUESTS);
     }
 
