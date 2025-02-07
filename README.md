@@ -1,5 +1,6 @@
 # Fetch Job Service 
-This service exposes just one GET mapping which in input takes user linkedin session cookie and csrf-token , based on above parameter it pulls all user jobs 
+This service exposes just one GET mapping which in input takes user linkedin session cookie and csrf-token(In request header ) and also job portal source as this api can support multiple sources,
+based on above parameter it pulls all user jobs 
 which are in SAVED , APPLIED , ARCHIVED , IN PROGRESS STATUS and returns json response  .
 
 
