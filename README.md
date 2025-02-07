@@ -3,6 +3,12 @@
 ## Overview
 The Job Service Application fetches job data from external portals like LinkedIn and provides data in simple json provided below . The service is resilient and fault-tolerant, using Resilience4j for handling rate-limiter, and circuit breakers.
 
+
+![Screenshot 2025-02-07 072628](https://github.com/user-attachments/assets/4e60b96c-53a3-415e-a08e-cca392ede528)
+
+
+
+
 ## Features
 - Fetch jobs from external APIs (e.g., LinkedIn) for multiple job types:
     - Saved Jobs
