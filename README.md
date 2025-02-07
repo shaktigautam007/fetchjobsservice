@@ -1,29 +1,49 @@
-# Project Name
+# Fetch Job Servuce 
+This service exposes just one GET mapping which in input takes user linkedin session cookie and csrf-token , based on above parameter it pulls all user jobs 
+which are in SAVED , APPLIED , ARCHIVED , IN PROGRESS STATUS and returns json response pointed below .
 
-A short description of what your project does.
 
-## Features
 
-- Feature 1
-- Feature 2
-- Feature 3
+{
+    "saved": {
+        "jobs": [
+            {
+                "role": "Java Backend Lead Software Engineer",
+                "company": "JPMorganChase",
+                "location": "Glasgow (On-site)",
+                "appliedOn": "Posted 1w ago"
+            },
+            {
+                "role": "Senior Associate, Full-Stack Engineer",
+                "company": "BNY",
+                "location": "Greater Manchester (On-site)",
+                "appliedOn": "  Be an early applicant"
+            }
+        ]
+    },
+    "applied": {
+        "jobs": [
+            {
+                "role": "Senior Software Engineer",
+                "company": "Roku",
+                "location": "Cambridge (On-site)",
+                "appliedOn": "Applied 26d ago"
+            }
+        ]
+    },
+    "inProgress": {
+        "jobs": []
+    },
+    "archived": {
+        "jobs": [
+            {
+                "role": "Java Lead Software Engineer",
+                "company": "JPMorganChase",
+                "location": "Glasgow (On-site)",
+                "appliedOn": "No longer accepting applications"
+            }
+        ]
+    }
+}
 
-## Installation
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/your-repo.git
-   ```
-
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-
-## Usage
-
-Describe how to use your project or any additional steps.
-
-## Contributing
-
-If you want to contribute, feel free to fork the repository, make changes, and submit a pull request.
