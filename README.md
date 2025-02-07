@@ -118,5 +118,5 @@ Swagger Endpoint http://localhost:8080/swagger-ui/index.html#/
 
 
 ## Contact
-For any queries or issues, please contact [shaktigautam007@gmail.com].
+For any  issues, please contact[shaktigautam007@gmail.com.
 
